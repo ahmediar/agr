@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTOBOTS // Боевой реестр</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="hud">
+    <div class="hud-left">
+      <img class="emblem" src="images/emblem.png" alt="Эмблема автоботов">
+      <div>
+        <p class="tag">CYBERTRON // SECTOR 07</p>
+        <h1>AUTOBOTS</h1>
+        <p class="sub">Реестр активных юнитов</p>
+      </div>
+    </div>
+    <div class="hud-right">
+      <div class="stat">
+        <span>СТАТУС</span>
+        <strong class="live">ONLINE</strong>
+      </div>
+      <div class="stat">
+        <span>ЮНИТЫ</span>
+        <strong id="unit-count">12</strong>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero.png" alt="Ангар автоботов">
+    <div class="hero-copy">
+      <p class="code">ARK-01 // HANGAR DECK</p>
+      <h2>До последнего автобота</h2>
+      <p>Выбери юнит, чтобы открыть досье. Свобода — это право каждого разумного существа.</p>
+    </div>
+  </section>
+
+  <nav class="filters" aria-label="Фильтр по роли">
+    <button class="chip is-on" data-role="all">Все</button>
+    <button class="chip" data-role="command">Командование</button>
+    <button class="chip" data-role="scout">Разведка</button>
+    <button class="chip" data-role="combat">Бой</button>
+    <button class="chip" data-role="support">Поддержка</button>
+  </nav>
+
+  <main class="grid" id="roster"></main>
+
+  <dialog id="dossier">
+    <button class="close" type="button" aria-label="Закрыть">×</button>
+    <div class="dossier-body">
+      <img id="d-img" alt="">
+      <div>
+        <p class="code" id="d-code"></p>
+        <h3 id="d-name"></h3>
+        <p class="aka" id="d-aka"></p>
+        <ul>
+          <li><span>Роль</span><b id="d-role"></b></li>
+          <li><span>Альт-форма</span><b id="d-alt"></b></li>
+          <li><span>Оружие</span><b id="d-weapon"></b></li>
+        </ul>
+        <p id="d-bio"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <footer>
+    <span>AUTOBOT COMMAND // EARTH OPS</span>
+    <span>ROLL OUT</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
